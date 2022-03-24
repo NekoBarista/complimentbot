@@ -1,0 +1,165 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compliment Bot</title>
+    <style>
+                    body {
+
+              background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,203,164,1) 66%);  }
+
+                    h1 {
+                      text-align: center;
+      font-family:Courgette;
+      font-weight: lighter;
+                      margin: auto;
+                      font-size: 5vw;
+                      color: #ffcba4;
+                    }
+
+                    h2 {
+                      margin: auto;
+                      text-align: center;
+                      font-weight: lighter;
+                      font-size: 5vw;
+                    }
+
+                    button {
+                      background-color: #ffcba4;
+                      display: block;
+                      margin: auto;
+                      font-size: 20px;
+                      height: 80px;
+                       padding: 20px 20px;
+                  border: black; solid 1px;
+                  border-radius: 30px;
+                  border-color: #ffcba4;
+                  color: white;
+                  transition: all, 200ms, ease-in-out;
+                   box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+                    }
+            button:hover { color: #ffcba4;
+                background-color: white;
+
+            }
+                    img {
+                      display: block;
+                      margin: auto;
+                      max-width: 50vw;
+                      background-color: white;
+                      height: 40vw;
+                    }
+                
+                    
+                    p {text-align: center;
+                    font-family: helvetica;
+                font-weight: bolder;
+              font-size: 2vw;}
+
+                .name {font-weight: lighter;}
+
+                
+                .white-box {
+                      background-color: white;
+                      color: black;
+                      width: 60vw;                      
+                      margin: auto;
+                      text-align: center;
+                }
+                     
+    </style>
+  </head>
+  <body>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div class="white-box">
+      <br />
+      <br />
+      <br />
+      <br />
+      <h1>Compliment Bot</h1>
+      <br />
+      <br />
+      <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/029/454/original/pexels-eva-elijas-5941317.jpg?1647504143">
+
+      <br />
+      <br />
+      <h2>Do you need a compliment?</h2>
+      <br />
+      <br />
+
+      <button>Yes, Please!</button>
+      <br />
+      <br />
+
+
+      <script>
+        function giveCompliment() {
+          let h1 = document.querySelector("h1");
+          let h2 = document.querySelector("h2");
+          let name = prompt("What is your name?");
+          
+          let bodyPart = prompt(
+            "What part of your body do you want a compliment on?"
+          );
+          let resultBody = bodyPart.replace(/my /g, " ");
+          resultBody = resultBody.toLowerCase();
+
+
+          let activity = prompt(
+            "What activity have you been working on lately?"
+          );
+
+               let activityFirstPerson = activity.replace(/my /g, " your ");
+
+          if (resultBody === "butt") {
+            h1.innerHTML = "Hey there, " + name;
+            h2.innerHTML =
+              "In case no one has said it to you today, nice " +
+              resultBody +
+              "🍑" +
+              "! Well done on all your hard work on " +
+              activityFirstPerson +
+              "!  You Rock! 🤘";
+          } else {
+            h1.innerHTML = "Hey there, " + name;
+            h2.innerHTML =
+              "In case no one has said it to you today, nice " +
+              resultBody +
+              "! Well done on all your hard work on " +
+              activityFirstPerson +
+              "! You Rock! 🤘";
+          }
+        }
+        let complimentButton = document.querySelector("button");
+        complimentButton.addEventListener("click", giveCompliment);
+      </script>
+
+      <p>Coded by <span class="name">Vicki Smith</span> <br>
+        <br>
+        <br>
+      Photo by <a href="https://www.instagram.com/fleurrustique/"> Eva Elijas <a> </p>
+      <br />
+      <br />
+      <br />
+    </div>
+    <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+  </body>
+</html>
